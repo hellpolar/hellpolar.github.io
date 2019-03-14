@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="CSS/site.css"/>
+<link rel="stylesheet" href="CSS/reg.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="JVS/script.js"></script>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div style="margin-top: 40px;">
+  <button class="dropdown-btn">iPhone 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="iphoneXSM.html">iPhone XS Max</a>
+    <a href="iphoneX.html">iPhone X</a>
+  </div>
+  <button class="dropdown-btn">Samsung 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="sam9.html">Samsung Galaxy Note9</a>
+    <a href="sam8.html">Samsung Galaxy Note8</a>
+  </div>
+  <button class="dropdown-btn">Xiaomi 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="mimax.html">Xiaomi Mi Mix</a>
+    <a href="mi8.html">Xiaomi Mi8</a>
+  </div>	  
+</div>
+</div>
+	
+
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+
+	
+	
+<div id="main">
+    <span style="font-size:35px;cursor:pointer; margin-left: 10px" onclick="openNav()" >&#9776; </span>
+    <span  onclick="openNav()"><img style="width: 100px; height: 50px" src="Photo/Logo/logo1.jpg"/></span>
+	<form class="example" action="action_page.php">
+  		<input type="text" placeholder="Search.." name="search">
+  		<button type="submit"><i class="fa fa-search"></i></button>
+	</form>
+	<div class="header">
+	  <div class="header-right">
+		<a href="#home">Home</a>
+		<a href="contact.html">Contact</a>
+		<a href="#about">About</a>
+		<button type="button" class="btn btn-default btn-lg" id="myBtn" style="border: none">Login/Register</button>
+		</div>
+  <!-- Modal -->
+		  <div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header" style="padding:35px 50px;">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4><span class="glyphicon glyphicon-lock"></span>Login</h4>
+				</div>
+				<div class="modal-body" style="padding:40px 50px;">
+				  <form role="form">
+					<div class="form-group">
+					  <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+					  <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+					</div>
+					<div class="form-group">
+					  <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+					  <input type="text" class="form-control" id="psw" placeholder="Enter password">
+					</div>
+					<div class="checkbox">
+					  <label><input type="checkbox" value="" checked>Remember me</label>
+					</div>
+					  <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+				  </form>
+				</div>
+				<div class="modal-footer">
+				  <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+				  <p>Not a member? <a href="#">Sign Up</a></p>
+				  <p>Forgot <a href="#">Password?</a></p>
+				</div>
+			  </div>
+			</div>
+		  </div> 
+	  </div>
+</div>
+
+      <script>
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#myModal").modal();
+    });
+});
+</script>
+
+<div>
+	<div>
+		<h3 class="tittle-w3l text-center">
+				<span>R</span>egister
+		
+		<!-- //first section -->
+<form name="f1" class="f1">
+			<table  class="table table-hover" align="center">
+				<tr>
+					<td><label>Fullname:</label></td>
+					<td><input type="text" name="txtFull" placeholder="Please enter your full name">*</td>
+				</tr>
+				<tr>
+					<td><label>Username:</label></td>
+					<td><input type="text" name="txtName" placeholder="Your Username">*</td>
+				</tr>
+				<tr>
+					<td><label>Password:</label></td>
+					<td><input type="text" name="txtPass" placeholder="Your Password">*</td>
+				</tr>
+				<tr>
+					<td><label>Confirm Password:</label></td>
+					<td><input type="text" name="txtConfirm" placeholder="Confirm above password">*</td>
+				</tr>
+				<tr>
+					<td><label>Address:</label></td>
+					<td><textarea name="txtAdd" placeholder="Your address"></textarea></td>
+				</tr>
+				<tr>
+					<td><label>Phone Number:</label></td>
+					<td><input type="text" name="txtPhone" placeholder="Your phone number"></td>
+				</tr>
+				<tr>
+					<td><label>E-mail:</label></td>
+					<td><input type="text" name="txtMail" placeholder="example@gmail.com">*</td>
+				</tr>
+				<tr>
+					<td><label>Date of Birth:</label></td>
+					<td><input type="text" name="txtDate" placeholder="MM/DD/YY"></td>
+				</tr>
+				<tr>
+					<td><label>City:</label></td>
+					<td>
+						<select name="txtCity">
+							<option>--Select Country--</option>
+							<option>VietNam</option>
+							<option>Indonesia</option>
+							<option>Thailand</option>
+							<option>France</option>
+							<option>America</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label>Gender:</label></td>
+					<td><input type="radio" name="gt"/>Male
+						<input type="radio" name="gt"/>Female</td>
+				</tr>
+				<tr>
+					<td><label>Hobbies:</label></td>
+					<td>
+						<input name="st" type="checkbox"/>Shopping
+						<input name="st" type="checkbox"/>Eating and drinking
+						<input name="st" type="checkbox"/>Traveling
+					</td>
+				</tr>
+			</table>
+	</div>
+</div>
+	
+</body>
+<footer class="footer-distributed" id="about">
+
+			<div class="footer-left">
+
+				<h3>Company<span>logo</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Blog</a>
+					·
+					<a href="#">Pricing</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Faq</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">Company Name &copy; 2018</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>142-144 Pham Phu Thu</span> HoChiMinh, VietNam</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>0938 22 66 01</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">hoangpmgcs17076@fpt.edu.vn</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Selling genuine and handled phones
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+</html> 
